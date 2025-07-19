@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Oswald';
+  src: url('Oswald.ttf') format('truetype');
+
+}
+body{
+    display: grid;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    place-items: center;
+    font-family:"Oswald", monospace ;
+}
+.menu{
+    list-style: none;
+       place-items: center;
+font-family: "Oswald", monospace;
+   
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+    border: 2px solid;
+    transition:  border-color 0.3s ease-in-out;
+}
+
+li{
+  place-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+.menu:hover :not(li:hover){
+    opacity: .2;
+}
+.menu:hover{
+border-color:rgb(128, 25, 128);
+
+}
+#toggle{
+    border-radius: 10px;
+    font-size: larger;
+    background-color: gainsboro;
+    border: auto;
+    border-color: gainsboro;
+    transition: background-color 0.3s ease-in;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088); 
+    cursor:grab;
+    margin-top: 500px;
+    place-items: center;
+}
+#toggle:hover{
+    background-color: rgb(255, 255, 255);
+}
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin: 20px auto;
+}
+.card-container{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+        margin-top: 30px;
+
+    
+}
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(228, 228, 228);
+    
+
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    gap: 10px;
+       box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+transition: border-color 0.1s ease-in;
+}
+.card:hover{
+     border:4px solid;
+     border-color: rgb(128, 25, 128);
+   
+   
+}
+.search-container{
+    position: relative;
+    font-family: monospace;
+}
+
+input{
+   all:unset;
+   padding: 15px;
+   box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+border:2px solid black;
+   border-radius: 12px;
+  transition: border .3s ease-in-out;
+  background: transparent;
+  
+}
+input:hover{
+    border-color: white;
+}
+input:focus{
+    border-color: rgb(128, 25, 128);
+}
+
+.login{
+    position: relative;
+    border:2px solid ;
+z-index: 1;
+box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+font-size:x-large;
+
+border-radius: 5px;
+cursor: pointer;
+height: 40px;
+width: auto;
+background: transparent;
+}
+.login::before{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    right: 50%;
+    opacity:0;
+    z-index:-1;
+    background:rgb(128, 25, 128);
+    transition: 0.5s all ease;
+    border:rgb(128, 25, 128);
+}
+.login:hover{
+    color:white;
+
+}
+.login:hover::before{
+    left:0;
+    right:0;
+    opacity:1;
+
+
+}
